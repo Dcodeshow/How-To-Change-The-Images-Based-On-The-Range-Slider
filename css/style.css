@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700,900|Open+Sans:300,400|Oswald:400,700');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    padding: 30px;
+}
+
+img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.slidecontainer {
+    margin-top: 10px;
+}
+
+.slider-range {
+    width: 100%;
+}
+
+.range-number {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 3px;
+    margin-bottom: 15px;
+}
+
+
+/**************/

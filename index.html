@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>D CODE SHOW</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="imagechange">
+        <img src="images/range-slider/0.jpg" id="imgchange">
+    </div>
+
+    <div class="slidecontainer">
+        <input type="range" min="1" max="100" value="1" class="slider-range" id="myRange">
+        <ul class="range-number">
+            <li>0</li>
+            <li>-1</li>
+            <li>-2</li>
+            <li>-3</li>
+            <li>-4</li>
+            <li>-5</li>
+            <li>-6</li>
+        </ul>
+        <p>Value : <span id="rangevalue"></span></p>
+    </div>
+
+
+
+    <script>
+        let rangevalue = document.getElementById("myRange");
+        let setvalue = document.getElementById("rangevalue");
+        let imgchangevalue = document.getElementById("imgchange")
+            //setvalue.innerHTML = rangevalue.value;
+            //console.log(rangevalue.value)
+
+        //Now will use oninput event.
+        rangevalue.oninput = function() {
+            let getvalue = rangevalue.value;
+            setvalue.innerHTML = this.value;
+            if (getvalue > 0 && getvalue < 16) {
+                imgchangevalue.setAttribute("src", "images/range-slider/0.jpg")
+            } else if (getvalue >= 17 && getvalue <= 33) {
+                imgchangevalue.setAttribute("src", "images/range-slider/1.jpg")
+            } else if (getvalue >= 34 && getvalue <= 49) {
+                imgchangevalue.setAttribute("src", "images/range-slider/2.jpg")
+            } else if (getvalue >= 50 && getvalue <= 66) {
+                imgchangevalue.setAttribute("src", "images/range-slider/3.jpg")
+            } else if (getvalue >= 67 && getvalue <= 83) {
+                imgchangevalue.setAttribute("src", "images/range-slider/4.jpg")
+            } else if (getvalue >= 84 && getvalue <= 99) {
+                imgchangevalue.setAttribute("src", "images/range-slider/5.jpg")
+            } else if (getvalue >= 100) {
+                imgchangevalue.setAttribute("src", "images/range-slider/6.jpg")
+            }
+        }
+    </script>
+
+</body>
+
+</html>
